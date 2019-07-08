@@ -25,7 +25,6 @@
 #pragma mark - 第一种MD5加密
 - (NSString *)firstMd5:(NSString *)password salt:(NSString *)salt count:(NSString *)count
 {
-    static NSString *salt = salt;
     NSString *md5Str;
     if ([password length]==0) {
         return password;
