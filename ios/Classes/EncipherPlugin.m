@@ -13,9 +13,9 @@
 - (void)handleMethodCall:(FlutterMethodCall*)call result:(FlutterResult)result {
   if ([@"encrypt" isEqualToString:call.method]) {
       if ([[call.arguments objectForKey:@"type"] integerValue]==0) {
-          result([self firstMd5:[call.arguments objectForKey:@"raw"] salt:[call.arguments objectForKey:@"salt"] count:[call.arguments objectForKey:@"repeat"]] )
+          result([self firstMd5:[call.arguments objectForKey:@"raw"] salt:[call.arguments objectForKey:@"salt"] count:[call.arguments objectForKey:@"repeat"]] );
       }else{
-          result([self secondMd5:[call.arguments objectForKey:@"raw"] count:[call.arguments objectForKey:@"repeat"]])
+          result([self secondMd5:[call.arguments objectForKey:@"raw"] count:[call.arguments objectForKey:@"repeat"]]);
       }
   } else {
     result(FlutterMethodNotImplemented);
